@@ -1,0 +1,5341 @@
+{
+  "plans": {
+    "links": {
+      "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans?filter=future&per_page=1",
+      "next": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans?filter=future&offset=1&per_page=1"
+    },
+    "data": [
+      {
+        "type": "Plan",
+        "id": "77635970",
+        "attributes": {
+          "can_view_order": true,
+          "created_at": "2025-01-01T14:20:51Z",
+          "dates": "9 February 2025",
+          "files_expire_at": "2025-02-24T12:00:00Z",
+          "items_count": 13,
+          "last_time_at": "2025-02-09T10:30:00Z",
+          "multi_day": false,
+          "needed_positions_count": 4,
+          "other_time_count": 2,
+          "permissions": "Administrator",
+          "plan_notes_count": 0,
+          "plan_people_count": 21,
+          "planning_center_url": "https://services.planningcenteronline.com/plans/77635970",
+          "prefers_order_view": true,
+          "public": false,
+          "rehearsable": true,
+          "rehearsal_time_count": 0,
+          "reminders_disabled": false,
+          "series_title": null,
+          "service_time_count": 1,
+          "short_dates": "9 Feb 2025",
+          "sort_date": "2025-02-09T10:30:00Z",
+          "title": null,
+          "total_length": 5010,
+          "updated_at": "2025-02-04T12:45:06Z"
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "previous_plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635894"
+            }
+          },
+          "next_plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635985"
+            }
+          },
+          "series": {
+            "data": null
+          },
+          "created_by": {
+            "data": {
+              "type": "Person",
+              "id": "91471574"
+            }
+          },
+          "updated_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "linked_publishing_episode": {
+            "data": null
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "270211"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "270213"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "305991"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      }
+    ],
+    "included": [],
+    "meta": {
+      "total_count": 11,
+      "count": 1,
+      "next": {
+        "offset": 1
+      },
+      "can_order_by": ["title", "created_at", "updated_at", "sort_date"],
+      "can_query_by": [
+        "id",
+        "created_at",
+        "updated_at",
+        "series_title",
+        "title"
+      ],
+      "can_include": ["contributors", "my_schedules", "plan_times", "series"],
+      "can_filter": ["future", "past", "after", "before", "no_dates"],
+      "parent": {
+        "id": "1155896",
+        "type": "ServiceType"
+      }
+    }
+  },
+  "teamMembers": {
+    "links": {
+      "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members?include=team&per_page=100%60"
+    },
+    "data": [
+      {
+        "type": "PlanPerson",
+        "id": "1106680516",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-01T14:21:14Z",
+          "decline_reason": null,
+          "name": "André Henriksson",
+          "notes": null,
+          "notification_changed_at": "2025-01-01T14:29:11Z",
+          "notification_changed_by_name": "André Henriksson",
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": "Samuel Sigfrids",
+          "notification_sent_at": "2025-01-01T14:21:47Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/AH.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-01T14:29:11Z",
+          "team_position_name": "Lighting Operator",
+          "updated_at": "2025-01-01T14:29:11Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "103332034"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "91471574"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1106680516",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1113300969",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-16T11:02:40Z",
+          "decline_reason": null,
+          "name": "Fabien Maurice",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-22T13:35:53Z",
+          "notification_sender_name": "Frida Vincent Appiah",
+          "notification_sent_at": "2025-01-22T09:25:45Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/FM.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Multimedia",
+          "updated_at": "2025-01-22T13:35:53Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "136827490"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572867"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1113300969",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1113301099",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-16T11:05:14Z",
+          "decline_reason": null,
+          "name": "Lina Svensson",
+          "notes": null,
+          "notification_changed_at": "2025-01-24T15:27:51Z",
+          "notification_changed_by_name": "Lina Svensson",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-22T11:07:44Z",
+          "notification_sender_name": "Frida Vincent Appiah",
+          "notification_sent_at": "2025-01-22T09:25:45Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/person/121910573-1677175739/avatar.2.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-24T15:27:51Z",
+          "team_position_name": "Lyrics/Clock",
+          "updated_at": "2025-01-24T15:27:51Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "121910573"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572867"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1113301099",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1113611032",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-16T21:52:52Z",
+          "decline_reason": null,
+          "name": "Andreas Segerfeldt",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": null,
+          "notification_sent_at": null,
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/person/71203174-1578579900/avatar.1.png?g=224x224%23",
+          "prepare_notification": true,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Bildproducent",
+          "updated_at": "2025-01-16T21:52:52Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71203174"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203174"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203174"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1113611032",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1113611283",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-16T21:53:20Z",
+          "decline_reason": null,
+          "name": "Fabian Moraga",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": null,
+          "notification_sent_at": null,
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/FM.png?g=224x224%23",
+          "prepare_notification": true,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Camera 2",
+          "updated_at": "2025-01-16T21:53:20Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71202646"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203174"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203174"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1113611283",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1114837361",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-21T13:00:25Z",
+          "decline_reason": null,
+          "name": "Alicia Sanno",
+          "notes": null,
+          "notification_changed_at": "2025-01-30T19:56:11Z",
+          "notification_changed_by_name": "Alicia Sanno",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T14:12:22Z",
+          "notification_sender_name": "Deyzhah Ndurya",
+          "notification_sent_at": "2025-01-28T14:10:34Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/AS.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-30T19:56:11Z",
+          "team_position_name": "Hot Seat Support",
+          "updated_at": "2025-01-30T19:56:11Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "117916789"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71205925"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71205925"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1114837361",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1114934617",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-21T15:56:38Z",
+          "decline_reason": null,
+          "name": "Anna Starrin",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-30T08:58:30Z",
+          "notification_sender_name": "Anastasiia Lymar",
+          "notification_sent_at": "2025-01-30T08:22:59Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/AS.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Photo 2",
+          "updated_at": "2025-01-30T08:58:30Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "149627801"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640591"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295254"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1114934617",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1115459697",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-22T09:39:55Z",
+          "decline_reason": null,
+          "name": "Mike Musasa Mutombo",
+          "notes": null,
+          "notification_changed_at": "2025-01-23T14:45:20Z",
+          "notification_changed_by_name": "Mike Musasa Mutombo",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-22T11:28:19Z",
+          "notification_sender_name": "Frida Vincent Appiah",
+          "notification_sent_at": "2025-01-22T11:07:11Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/MM.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-23T14:45:20Z",
+          "team_position_name": "Service Producer",
+          "updated_at": "2025-01-23T14:45:20Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71202691"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1115459697",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1115460045",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-22T09:52:06Z",
+          "decline_reason": null,
+          "name": "Kevin Strömberg",
+          "notes": null,
+          "notification_changed_at": "2025-02-04T09:29:45Z",
+          "notification_changed_by_name": "Frida Vincent Appiah",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-22T11:10:21Z",
+          "notification_sender_name": "Frida Vincent Appiah",
+          "notification_sent_at": "2025-01-22T11:07:11Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/KS.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-04T09:29:45Z",
+          "team_position_name": "PM",
+          "updated_at": "2025-02-04T09:29:45Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "57666197"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1115460045",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1115465399",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-22T11:27:03Z",
+          "decline_reason": null,
+          "name": "Elizabeth Uwubamwen",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-30T20:02:31Z",
+          "notification_sender_name": "Deyzhah Ndurya",
+          "notification_sent_at": "2025-01-28T14:10:34Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/EU.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Hot Seat",
+          "updated_at": "2025-01-30T20:02:31Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "96761633"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71205925"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71205925"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1115465399",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010583",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:10:07Z",
+          "decline_reason": null,
+          "name": "Frida Vincent Appiah",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T16:37:26Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:47Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/FV.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Vox 3 WL",
+          "updated_at": "2025-01-28T16:37:26Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010583",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010725",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:10:37Z",
+          "decline_reason": null,
+          "name": "Emelie Cummings",
+          "notes": null,
+          "notification_changed_at": "2025-01-28T16:38:09Z",
+          "notification_changed_by_name": "Emelie Cummings",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T16:37:22Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:46Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/EC.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-28T16:38:09Z",
+          "team_position_name": "Vox 1",
+          "updated_at": "2025-01-28T16:38:09Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "75824060"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010725",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010748",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:10:44Z",
+          "decline_reason": null,
+          "name": "Rebecca Ginal",
+          "notes": null,
+          "notification_changed_at": "2025-01-30T06:25:37Z",
+          "notification_changed_by_name": "Rebecca Ginal",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T16:37:26Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:47Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/RG.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-30T06:25:37Z",
+          "team_position_name": "Vox 4",
+          "updated_at": "2025-01-30T06:25:37Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71201856"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010748",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010762",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:10:50Z",
+          "decline_reason": null,
+          "name": "Martin Tunhav",
+          "notes": null,
+          "notification_changed_at": "2025-02-03T09:17:38Z",
+          "notification_changed_by_name": "Martin Tunhav",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T16:41:30Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:46Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/MT.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "D",
+          "status_updated_at": "2025-02-03T09:17:38Z",
+          "team_position_name": "Vox 5",
+          "updated_at": "2025-02-03T09:17:38Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71203434"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010762",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010835",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:11:08Z",
+          "decline_reason": null,
+          "name": "Rebecca Ginal",
+          "notes": null,
+          "notification_changed_at": "2025-01-30T06:25:36Z",
+          "notification_changed_by_name": "Rebecca Ginal",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T16:37:26Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:47Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/RG.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-30T06:25:36Z",
+          "team_position_name": "VD",
+          "updated_at": "2025-01-30T06:25:36Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71201856"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010835",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010868",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:11:17Z",
+          "decline_reason": null,
+          "name": "Daniel S Diago",
+          "notes": null,
+          "notification_changed_at": "2025-02-03T10:16:09Z",
+          "notification_changed_by_name": "Daniel S Diago",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T18:38:39Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:47Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/DS.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-03T10:16:09Z",
+          "team_position_name": "Acoustic",
+          "updated_at": "2025-02-03T10:16:09Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71203088"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010868",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1116010911",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-23T14:11:33Z",
+          "decline_reason": null,
+          "name": "Daniel S Diago",
+          "notes": null,
+          "notification_changed_at": "2025-02-03T10:16:09Z",
+          "notification_changed_by_name": "Daniel S Diago",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T18:38:39Z",
+          "notification_sender_name": "Sofia Zetterberg",
+          "notification_sent_at": "2025-01-28T16:35:48Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/DS.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-03T10:16:09Z",
+          "team_position_name": "Vox 2 Co-WL",
+          "updated_at": "2025-02-03T10:16:09Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71203088"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203598"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1116010911",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1117954958",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-28T12:29:51Z",
+          "decline_reason": null,
+          "name": "Josef Lekardal",
+          "notes": null,
+          "notification_changed_at": "2025-01-30T11:51:17Z",
+          "notification_changed_by_name": "Josef Lekardal",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T17:17:18Z",
+          "notification_sender_name": "Oskar Larsen",
+          "notification_sent_at": "2025-01-28T17:16:19Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/person/70400156-1576512034/avatar.1.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-30T11:51:17Z",
+          "team_position_name": "Drums",
+          "updated_at": "2025-01-30T11:51:17Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1117954958",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1117954978",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-28T12:30:06Z",
+          "decline_reason": null,
+          "name": "Patrick Seidel",
+          "notes": null,
+          "notification_changed_at": "2025-01-28T17:18:50Z",
+          "notification_changed_by_name": "Patrick Seidel",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T17:23:29Z",
+          "notification_sender_name": "Oskar Larsen",
+          "notification_sent_at": "2025-01-28T17:16:19Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/person/134804862-1695124349/avatar.1.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-28T17:18:50Z",
+          "team_position_name": "Gtr 1",
+          "updated_at": "2025-01-28T17:23:29Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "134804862"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1117954978",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1117954987",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-28T12:30:13Z",
+          "decline_reason": null,
+          "name": "Roy Castro",
+          "notes": null,
+          "notification_changed_at": "2025-01-28T20:48:56Z",
+          "notification_changed_by_name": "Roy Castro",
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-28T19:49:05Z",
+          "notification_sender_name": "Oskar Larsen",
+          "notification_sent_at": "2025-01-28T17:16:19Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/RC.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-01-28T20:48:56Z",
+          "team_position_name": "Keys 1",
+          "updated_at": "2025-01-28T20:48:56Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "71201486"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1117954987",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1118096460",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-28T16:39:10Z",
+          "decline_reason": null,
+          "name": "Elvira Nordin",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": "2025-01-29T08:08:02Z",
+          "notification_read_at": "2025-01-29T23:19:25Z",
+          "notification_sender_name": "Alfredo Guajardo Arduiz",
+          "notification_sent_at": "2025-01-29T08:08:03Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/EN.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Stage Manager",
+          "updated_at": "2025-01-29T23:19:25Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "106782531"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "93600769"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1118096460",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1118585704",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-29T13:33:13Z",
+          "decline_reason": null,
+          "name": "Jacob Rabb",
+          "notes": null,
+          "notification_changed_at": "2025-02-03T20:39:17Z",
+          "notification_changed_by_name": "Jacob Rabb",
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": null,
+          "notification_sent_at": null,
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/JR.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-03T20:39:17Z",
+          "team_position_name": "FOH Tech",
+          "updated_at": "2025-02-03T20:39:17Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "122741639"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586001"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1118585704",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1118929104",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-29T22:18:00Z",
+          "decline_reason": null,
+          "name": "Elvira Nordin",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-30T08:23:09Z",
+          "notification_sender_name": "Anastasiia Lymar",
+          "notification_sent_at": "2025-01-30T08:22:59Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/EN.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Photo 1",
+          "updated_at": "2025-01-30T08:23:09Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "106782531"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640591"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295254"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1118929104",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1118929387",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-01-29T22:18:30Z",
+          "decline_reason": null,
+          "name": "Anastasiia Lymar",
+          "notes": null,
+          "notification_changed_at": null,
+          "notification_changed_by_name": null,
+          "notification_prepared_at": null,
+          "notification_read_at": "2025-01-30T08:23:09Z",
+          "notification_sender_name": "Anastasiia Lymar",
+          "notification_sent_at": "2025-01-30T08:23:00Z",
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/AL.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "U",
+          "status_updated_at": null,
+          "team_position_name": "Photo Editing",
+          "updated_at": "2025-01-30T08:23:09Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640591"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "84263290"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295254"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1118929387",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1120600274",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-02-04T12:31:32Z",
+          "decline_reason": null,
+          "name": "Tobias Gard",
+          "notes": null,
+          "notification_changed_at": "2025-02-04T12:44:53Z",
+          "notification_changed_by_name": "Oskar Larsen",
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": null,
+          "notification_sent_at": null,
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/TG.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-04T12:44:53Z",
+          "team_position_name": "Bass",
+          "updated_at": "2025-02-04T12:44:53Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "63287026"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1120600274",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      },
+      {
+        "type": "PlanPerson",
+        "id": "1120600300",
+        "attributes": {
+          "can_accept_partial": false,
+          "created_at": "2025-02-04T12:31:53Z",
+          "decline_reason": null,
+          "name": "Tobias Gard",
+          "notes": null,
+          "notification_changed_at": "2025-02-04T12:44:58Z",
+          "notification_changed_by_name": "Oskar Larsen",
+          "notification_prepared_at": null,
+          "notification_read_at": null,
+          "notification_sender_name": null,
+          "notification_sent_at": null,
+          "photo_thumbnail": "https://avatars.planningcenteronline.com/uploads/initials/TG.png?g=224x224%23",
+          "prepare_notification": false,
+          "status": "C",
+          "status_updated_at": "2025-02-04T12:44:58Z",
+          "team_position_name": "MD",
+          "updated_at": "2025-02-04T12:44:58Z"
+        },
+        "relationships": {
+          "person": {
+            "data": {
+              "type": "Person",
+              "id": "63287026"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "scheduled_by": {
+            "data": {
+              "type": "Person",
+              "id": "71199943"
+            }
+          },
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295253"
+              },
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          },
+          "service_times": {
+            "data": [
+              {
+                "type": "PlanTime",
+                "id": "190295255"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/team_members/1120600300",
+          "html": "https://services.planningcenteronline.com/plans/77635970"
+        }
+      }
+    ],
+    "included": [
+      {
+        "type": "Team",
+        "id": "4572868",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-07-29T17:17:57Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Production",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:48:58Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4572867",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-07-29T17:17:57Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Media",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:50:11Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4621838",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-03T07:51:01Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "TV",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2021-09-03T07:51:01Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4640592",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-17T08:12:14Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Creative Events",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2022-03-30T08:06:18Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4640591",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-17T08:09:13Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Communications",
+          "rehearsal_team": null,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2021-09-17T08:09:13Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640591"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586003",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Vocals",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2025-01-22T12:18:57Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586002",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Band",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2025-01-22T12:17:11Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586001",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Audio",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:49:39Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001"
+        }
+      }
+    ],
+    "meta": {
+      "total_count": 26,
+      "count": 26,
+      "can_query_by": ["team_id"],
+      "can_include": ["declined_plan_times", "person", "plan", "team"],
+      "can_filter": [
+        "confirmed",
+        "not_deleted",
+        "not_archived",
+        "not_declined"
+      ],
+      "parent": {
+        "id": "77635970",
+        "type": "Plan"
+      }
+    }
+  },
+  "neededPositions": {
+    "links": {
+      "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/needed_positions?include=team&per_page=100"
+    },
+    "data": [
+      {
+        "type": "NeededPosition",
+        "id": "1013402217",
+        "attributes": {
+          "quantity": 1,
+          "scheduled_to": "plan",
+          "team_position_name": "Co-Tech"
+        },
+        "relationships": {
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586001"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "time": {
+            "data": null
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/needed_positions/1013402217"
+        }
+      },
+      {
+        "type": "NeededPosition",
+        "id": "1019503071",
+        "attributes": {
+          "quantity": 1,
+          "scheduled_to": "plan",
+          "team_position_name": "Camera 1"
+        },
+        "relationships": {
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "time": {
+            "data": null
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/needed_positions/1019503071"
+        }
+      },
+      {
+        "type": "NeededPosition",
+        "id": "1024457721",
+        "attributes": {
+          "quantity": 1,
+          "scheduled_to": "plan",
+          "team_position_name": "Hot Seat Support"
+        },
+        "relationships": {
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "time": {
+            "data": null
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/needed_positions/1024457721"
+        }
+      },
+      {
+        "type": "NeededPosition",
+        "id": "1025072612",
+        "attributes": {
+          "quantity": 1,
+          "scheduled_to": "plan",
+          "team_position_name": "Vox 5"
+        },
+        "relationships": {
+          "team": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+            },
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "plan": {
+            "data": {
+              "type": "Plan",
+              "id": "77635970"
+            }
+          },
+          "time": {
+            "data": null
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/plans/77635970/needed_positions/1025072612"
+        }
+      }
+    ],
+    "included": [
+      {
+        "type": "Team",
+        "id": "4586001",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Audio",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:49:39Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4621838",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-03T07:51:01Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "TV",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2021-09-03T07:51:01Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4640592",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-17T08:12:14Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Creative Events",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2022-03-30T08:06:18Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586003",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Vocals",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2025-01-22T12:18:57Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+        }
+      }
+    ],
+    "meta": {
+      "total_count": 4,
+      "count": 4,
+      "can_query_by": ["team_id"],
+      "can_include": ["team", "time"],
+      "parent": {
+        "id": "77635970",
+        "type": "Plan"
+      }
+    }
+  },
+  "teams": {
+    "links": {
+      "self": "https://api.planningcenteronline.com/services/v2/service_types/1155896/teams?include=team_positions"
+    },
+    "data": [
+      {
+        "type": "Team",
+        "id": "4572867",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-07-29T17:17:57Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Media",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:50:11Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572867/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "24724656"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24724660"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25933147"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24724654"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4572868",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-07-29T17:17:57Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Production",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:48:58Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "26122602"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "32381083"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116189"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24724662"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25108686"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24724664"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25108684"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25108687"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "26033476"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25594944"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116191"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "26017889"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586001",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Audio",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2024-05-23T09:49:39Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "114890487"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586001/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "25116213"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792590"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "30696674"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792591"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586002",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Band",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2025-01-22T12:17:11Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "24792592"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792593"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792594"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792595"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792596"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792597"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792598"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "26826096"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4586003",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-08-10T12:40:20Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Vocals",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2025-01-22T12:18:57Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "71203397"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "24792599"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792600"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792601"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792602"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792603"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792604"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792605"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24792606"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4621838",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-03T07:51:01Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "TV",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2021-09-03T07:51:01Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "24976989"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976990"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976991"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976992"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976993"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976994"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976995"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976996"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "24976997"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4640591",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-17T08:09:13Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Communications",
+          "rehearsal_team": null,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2021-09-17T08:09:13Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640591/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "25116165"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116164"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116162"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640591"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4640592",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-17T08:12:14Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Creative Events",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2022-03-30T08:06:18Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4640592/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "25116167"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116168"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25116166"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4644401",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2021-09-20T21:43:04Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Worship Media",
+          "rehearsal_team": true,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2022-11-07T23:30:17Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4644401/team_positions"
+            },
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4644401"
+        }
+      },
+      {
+        "type": "Team",
+        "id": "4807207",
+        "attributes": {
+          "archived_at": null,
+          "assigned_directly": true,
+          "created_at": "2022-01-19T09:18:59Z",
+          "default_prepare_notifications": true,
+          "default_status": "U",
+          "last_plan_from": "organization",
+          "name": "Oversights",
+          "rehearsal_team": false,
+          "schedule_to": "plan",
+          "secure_team": false,
+          "sequence": null,
+          "stage_color": "orange",
+          "stage_variant": null,
+          "updated_at": "2022-01-19T09:58:12Z",
+          "viewers_see": 2
+        },
+        "relationships": {
+          "service_type": {
+            "data": {
+              "type": "ServiceType",
+              "id": "1155896"
+            }
+          },
+          "default_responds_to": {
+            "data": {
+              "type": "Person",
+              "id": "70400156"
+            }
+          },
+          "team_positions": {
+            "links": {
+              "related": "https://api.planningcenteronline.com/services/v2/teams/4807207/team_positions"
+            },
+            "data": [
+              {
+                "type": "TeamPosition",
+                "id": "26281199"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25933150"
+              },
+              {
+                "type": "TeamPosition",
+                "id": "25933151"
+              }
+            ]
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4807207"
+        }
+      }
+    ],
+    "included": [
+      {
+        "type": "TeamPosition",
+        "id": "24724656",
+        "attributes": {
+          "name": "Camera Live-Feed",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867/team_positions/24724656"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24724660",
+        "attributes": {
+          "name": "Lyrics/Clock",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867/team_positions/24724660"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25933147",
+        "attributes": {
+          "name": "Media rigg",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867/team_positions/25933147"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24724654",
+        "attributes": {
+          "name": "Multimedia",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572867"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572867/team_positions/24724654"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "26122602",
+        "attributes": {
+          "name": "Co-tech",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/26122602"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "32381083",
+        "attributes": {
+          "name": "Creative Director",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/32381083"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116189",
+        "attributes": {
+          "name": "Light Assist",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25116189"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24724662",
+        "attributes": {
+          "name": "Lighting Operator",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/24724662"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25108686",
+        "attributes": {
+          "name": "PM",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25108686"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24724664",
+        "attributes": {
+          "name": "Producer",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/24724664"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25108684",
+        "attributes": {
+          "name": "Rigg",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25108684"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25108687",
+        "attributes": {
+          "name": "Service Producer",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25108687"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "26033476",
+        "attributes": {
+          "name": "SP Assist",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/26033476"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25594944",
+        "attributes": {
+          "name": "Stage Design",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "305987"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25594944"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116191",
+        "attributes": {
+          "name": "Stage Manager",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "305987"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/25116191"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "26017889",
+        "attributes": {
+          "name": "Upplärning",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4572868"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4572868/team_positions/26017889"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116213",
+        "attributes": {
+          "name": "Co-Tech",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001/team_positions/25116213"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792590",
+        "attributes": {
+          "name": "FOH Tech",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001/team_positions/24792590"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "30696674",
+        "attributes": {
+          "name": "FOH Tech Assist",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001/team_positions/30696674"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792591",
+        "attributes": {
+          "name": "MON Tech",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586001"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586001/team_positions/24792591"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792592",
+        "attributes": {
+          "name": "Bass",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "270210"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "270212"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "305989"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792592"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792593",
+        "attributes": {
+          "name": "Drums",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "270211"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "270213"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "305991"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792593"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792594",
+        "attributes": {
+          "name": "Gtr 1",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792594"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792595",
+        "attributes": {
+          "name": "Gtr 2",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792595"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792596",
+        "attributes": {
+          "name": "Keys 1",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "270214"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "305990"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792596"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792597",
+        "attributes": {
+          "name": "Keys 2",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "270214"
+              },
+              {
+                "type": "AttachmentType",
+                "id": "305990"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792597"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792598",
+        "attributes": {
+          "name": "MD",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/24792598"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "26826096",
+        "attributes": {
+          "name": "Tracks",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586002"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586002/team_positions/26826096"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792599",
+        "attributes": {
+          "name": "Acoustic",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "305987"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792599"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792600",
+        "attributes": {
+          "name": "VD",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792600"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792601",
+        "attributes": {
+          "name": "Vox 1",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792601"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792602",
+        "attributes": {
+          "name": "Vox 2 Co-WL",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792602"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792603",
+        "attributes": {
+          "name": "Vox 3 WL",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792603"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792604",
+        "attributes": {
+          "name": "Vox 4",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792604"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792605",
+        "attributes": {
+          "name": "Vox 5",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792605"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24792606",
+        "attributes": {
+          "name": "Vox 6",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4586003"
+            }
+          },
+          "attachment_types": {
+            "data": [
+              {
+                "type": "AttachmentType",
+                "id": "271204"
+              }
+            ]
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4586003/team_positions/24792606"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976989",
+        "attributes": {
+          "name": "Bildmixer",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976989"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976990",
+        "attributes": {
+          "name": "Bildproducent",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976990"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976991",
+        "attributes": {
+          "name": "BING",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976991"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976992",
+        "attributes": {
+          "name": "Camera 1",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976992"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976993",
+        "attributes": {
+          "name": "Camera 2",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976993"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976994",
+        "attributes": {
+          "name": "Camera 3",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976994"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976995",
+        "attributes": {
+          "name": "Camera 4",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976995"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976996",
+        "attributes": {
+          "name": "Camera 5",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976996"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "24976997",
+        "attributes": {
+          "name": "TOM",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4621838"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4621838/team_positions/24976997"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116165",
+        "attributes": {
+          "name": "Photo 1",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640591/team_positions/25116165"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116164",
+        "attributes": {
+          "name": "Photo 2",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640591/team_positions/25116164"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116162",
+        "attributes": {
+          "name": "Photo Editing",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640591"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640591/team_positions/25116162"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116167",
+        "attributes": {
+          "name": "Hot Seat",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592/team_positions/25116167"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116168",
+        "attributes": {
+          "name": "Hot Seat Support",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592/team_positions/25116168"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25116166",
+        "attributes": {
+          "name": "Office",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4640592"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4640592/team_positions/25116166"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "26281199",
+        "attributes": {
+          "name": "Creative Director",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4807207"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4807207/team_positions/26281199"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25933150",
+        "attributes": {
+          "name": "Creative Oversight",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4807207"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4807207/team_positions/25933150"
+        }
+      },
+      {
+        "type": "TeamPosition",
+        "id": "25933151",
+        "attributes": {
+          "name": "Overflow Oversight",
+          "negative_tag_groups": [],
+          "sequence": null,
+          "tag_groups": [],
+          "tags": []
+        },
+        "relationships": {
+          "team": {
+            "data": {
+              "type": "Team",
+              "id": "4807207"
+            }
+          },
+          "attachment_types": {
+            "data": []
+          },
+          "tags": {
+            "data": []
+          }
+        },
+        "links": {
+          "self": "https://api.planningcenteronline.com/services/v2/teams/4807207/team_positions/25933151"
+        }
+      }
+    ],
+    "meta": {
+      "total_count": 10,
+      "count": 10,
+      "can_order_by": ["name", "created_at", "updated_at"],
+      "can_query_by": ["name", "service_type_id"],
+      "can_include": [
+        "people",
+        "person_team_position_assignments",
+        "service_type",
+        "team_leaders",
+        "team_positions"
+      ],
+      "parent": {
+        "id": "1155896",
+        "type": "ServiceType"
+      }
+    }
+  }
+}
