@@ -44,19 +44,23 @@ export default defineEventHandler(async (event) => {
 
     if (ellapsedMinutes < Number(CACHE_TTL)) {
       console.log("serving cached data");
-      setResponseHeader(event, "X-CACHE", "HIT");
+      setResponseHeader(event, "X-CACHE-STATUS", "HIT");
+      setResponseHeader(event, "AGE", Math.round(ellapsed / 1000));
 
       return payload;
     }
   }
 
-  console.log("FRESH DATA");
+  console.log("serving fresh data");
   setResponseHeader(event, "X-CACHE", "MISS");
 
   const services = [
     { id: "1134523", name: "Norra" },
     { id: "1155896", name: "City AM" },
     { id: "1155898", name: "City PM" },
+    // { id: "1073502", name: "GBG 10:30" },
+    // { id: "1063681", name: "GBG 12:30" },
+    // { id: "1063677", name: "GBG 18:00" },
   ];
 
   const basicAuth = getBasicAuth({
@@ -153,6 +157,12 @@ export default defineEventHandler(async (event) => {
       const positionName = teamMember.attributes.team_position_name;
 
       const teamPosition = teamsById[teamId].positions[positionName];
+
+      if (!teamPosition) {
+        // maybe this team is removed or renamed? skip it
+        continue;
+      }
+
       const teamPerson = {
         name: teamMember.attributes.name,
         status: teamMember.attributes.status,
