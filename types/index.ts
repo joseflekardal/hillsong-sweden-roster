@@ -3,9 +3,14 @@ export interface Auth {
   password: string;
 }
 
-export interface PlansResponse {
-  data: { links: { self: string } }[];
-}
+export type PlansResponse = {
+  data: {
+    attributes: {
+      short_dates: string;
+    };
+    links: { self: string };
+  }[];
+};
 
 export type TeamMemberResponse = {
   data: {
@@ -70,4 +75,4 @@ export interface Team {
   positions: TeamPosition[];
 }
 
-export type PositionByName = Record<string, PersonSlim[]>;
+export type PositionsByName = Record<string, PersonSlim[]>;

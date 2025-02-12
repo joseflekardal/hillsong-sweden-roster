@@ -1,43 +1,60 @@
 <template>
   <div>
-    <h1>Sunday roster</h1>
+    <h1>Sunday roster <span v-if="status === 'pending'">Loading...</span></h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Team</th>
-          <th>Campus 1</th>
-          <th>Campus 2</th>
-        </tr>
-      </thead>
-      <tbody>
-        <template v-for="team in data" :key="team.teamName">
+    <nuxt-link to="/">This sunday</nuxt-link>
+    <nuxt-link :to="nextOffset">Next sunday</nuxt-link>
+
+    <div v-if="data">
+      <h2>{{ data.date }}</h2>
+      <table>
+        <thead>
           <tr>
-            <td colspan="100">{{ team.teamName }}</td>
+            <th>Team</th>
+            <th v-for="service in data.services">{{ service.name }}</th>
           </tr>
-          <tr v-for="position of team.positions" :key="team.teamName">
-            <td>{{ position.positionName }}</td>
-            <td v-for="campusRoster in position.roster">
-              <template v-if="campusRoster.length">
-                <p v-for="teamMember in campusRoster" class="team-member" :class="statusMap[teamMember.status]">
-                  <img :src="teamMember.avatar" :alt="teamMember.name + ' thumbnail'">
-                  {{ teamMember.name }}
-                </p>
-              </template>
-              <p v-else class="team-member not-available">N/A</p>
-            </td>
-          </tr>
-        </template>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <template v-for="team in data.teams" :key="team.teamName">
+            <tr>
+              <td colspan="100">{{ team.teamName }}</td>
+            </tr>
+            <tr v-for="position of team.positions" :key="team.teamName">
+              <td>{{ position.positionName }}</td>
+              <td v-for="campusRoster in position.roster">
+                <template v-if="campusRoster.length">
+                  <p v-for="teamMember in campusRoster" class="team-member" :class="statusMap[teamMember.status]">
+                    <img :src="teamMember.avatar" :alt="teamMember.name + ' thumbnail'">
+                    {{ teamMember.name }}
+                  </p>
+                </template>
+                <p v-else class="team-member not-available">N/A</p>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Team } from './types';
-const response = await useFetch<Team[]>("/api");
 
-const data = response.data;
+const route = useRoute()
+const query = computed(() => ({ ...route.query }));
+
+const nextOffset = computed(() => {
+  const currentOffset = Number(route.query.offset) || 0;
+
+  return `/?offset=${currentOffset + 1}`
+});
+
+const { status, data, refresh } = await useFetch<{ teams: Team[], date: string, services: { id: string, name: string }[] }>(() => '/api', { query })
+
+watch(() => route.query, refresh, {
+  deep: true
+})
 
 const statusMap = {
   C: 'confirmed',

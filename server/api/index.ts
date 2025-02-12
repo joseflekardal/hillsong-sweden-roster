@@ -6,7 +6,7 @@ import type {
   TeamMemberResponse,
   NeededPositionResponse,
   TeamResponse,
-  PositionByName,
+  PositionsByName,
 } from "~/types";
 
 function getBasicAuth(auth: Auth) {
@@ -40,18 +40,24 @@ export default defineEventHandler(async (event) => {
     const ellapsed = new Date().getTime() - new Date(timestamp).getTime();
     const ellapsedMinutes = ellapsed / 1000 / 60;
 
+    console.log({ ellapsedMinutes });
+
     if (ellapsedMinutes < Number(CACHE_TTL)) {
       console.log("serving cached data");
+      setResponseHeader(event, "X-CACHE", "HIT");
 
       return payload;
     }
   }
 
-  const servicesMap = {
-    norraam: "1134523",
-    cityam: "1155896",
-    citypm: "1155898",
-  };
+  console.log("FRESH DATA");
+  setResponseHeader(event, "X-CACHE", "MISS");
+
+  const services = [
+    { id: "1134523", name: "Norra" },
+    { id: "1155896", name: "City AM" },
+    { id: "1155898", name: "City PM" },
+  ];
 
   const basicAuth = getBasicAuth({
     username: PCO_APP_ID,
@@ -61,9 +67,16 @@ export default defineEventHandler(async (event) => {
   const headers = { headers: { Authorization: `Basic ${basicAuth}` } };
 
   const serviceTypes = await Promise.all(
-    Object.values(servicesMap).map(async (serviceTypeId) => {
+    services.map(async (serviceType) => {
+      let offset = "";
+      const query = getQuery(event);
+
+      if (query.offset) {
+        offset = `&offset=${Number(query.offset || "0")}`;
+      }
+
       const plans = await $fetch<PlansResponse>(
-        `https://api.planningcenteronline.com/services/v2/service_types/${serviceTypeId}/plans?filter=future&per_page=1`,
+        `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/plans?filter=future&per_page=1${offset}`,
         headers
       );
 
@@ -79,11 +92,10 @@ export default defineEventHandler(async (event) => {
           headers
         ),
         $fetch<TeamResponse>(
-          `https://api.planningcenteronline.com/services/v2/service_types/${serviceTypeId}/teams?include=team_positions`,
+          `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/teams?include=team_positions`,
           headers
         ),
       ]);
-
       return {
         teams,
         teamMembers,
@@ -97,7 +109,7 @@ export default defineEventHandler(async (event) => {
 
   const formattedServiceTypes: FormattedTeams[] = [];
   for (const serviceType of serviceTypes) {
-    const { teamMembers, plans, neededPositions, teams } = serviceType;
+    const { teamMembers, neededPositions, teams } = serviceType;
 
     const teamPositionById = teams.included.reduce<Record<string, string>>(
       (acc, cur) => {
@@ -115,14 +127,15 @@ export default defineEventHandler(async (event) => {
       const formattedTeam = {
         teamName,
         positions:
-          team.relationships.team_positions.data.reduce<PositionByName>(
+          team.relationships.team_positions.data.reduce<PositionsByName>(
             (acc, teamPosition) => {
               const positionName = teamPositionById[teamPosition.id];
 
-              const teamSet = allPositionsByTeamName.get(teamName) || new Set();
+              const positionSet =
+                allPositionsByTeamName.get(teamName) || new Set();
 
-              teamSet.add(positionName);
-              allPositionsByTeamName.set(teamName, teamSet);
+              positionSet.add(positionName);
+              allPositionsByTeamName.set(teamName, positionSet);
 
               acc[positionName] = [];
               return acc;
@@ -153,34 +166,56 @@ export default defineEventHandler(async (event) => {
   }
 
   const teams: Team[] = [];
-  allPositionsByTeamName.forEach((positions, teamName) => {
+  allPositionsByTeamName.forEach((positionSet, teamName) => {
+    const positions: Team["positions"] = [];
+    positionSet.forEach((positionName) => {
+      let hasPeople = false;
+      const position = {
+        positionName,
+        roster: formattedServiceTypes.map((serviceType) => {
+          const serviceTeam = serviceType[teamName];
+
+          if (!serviceTeam) {
+            return [];
+          }
+
+          const output = serviceTeam.positions[positionName] || [];
+
+          if (output.length) {
+            hasPeople = true;
+          }
+
+          return output;
+        }),
+      };
+
+      if (hasPeople) {
+        positions.push(position);
+      }
+    });
+
     const team = {
       teamName: teamName,
-      positions: Array.from(positions).map((positionName) => {
-        return {
-          positionName,
-          roster: formattedServiceTypes.map((serviceType) => {
-            const serviceTeam = serviceType[teamName];
-
-            if (!serviceTeam) {
-              return [];
-            }
-
-            return serviceTeam.positions[positionName] || [];
-          }),
-        };
-      }),
+      positions,
     };
 
-    teams.push(team);
+    if (positions.length) {
+      teams.push(team);
+    }
   });
 
+  const response = {
+    teams,
+    date: serviceTypes[0].plans.data[0].attributes.short_dates,
+    services,
+  };
+
   const cachePayload = JSON.stringify({
-    payload: teams,
+    payload: response,
     timestamp: new Date().toISOString(),
   });
 
   await CACHE.put(event.path, cachePayload);
 
-  return teams;
+  return response;
 });
