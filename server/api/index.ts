@@ -131,7 +131,7 @@ export default defineEventHandler(async (event) => {
 
     const teamPositionById = teams.included.reduce<Record<string, string>>(
       (acc, cur) => {
-        acc[cur.id] = cur.attributes.name;
+        acc[cur.id] = cur.attributes.name.toUpperCase();
         return acc;
       },
       {}
