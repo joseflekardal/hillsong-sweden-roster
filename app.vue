@@ -17,7 +17,7 @@
             <table-header class="sticky left-0 bg-white z-20">Team</table-header>
             <table-header v-for="service in data.services">{{
               service.name
-              }}</table-header>
+            }}</table-header>
           </tr>
         </thead>
         <tbody>
@@ -27,9 +27,9 @@
               <table-cell colspan="100" />
             </tr>
             <tr v-for="position of team.positions" :key="team.teamName">
-              <table-cell class="sticky left-0 bg-white z-10 uppercase">{{
+              <table-cell class="sticky left-0 bg-white z-10">{{
                 position.positionName
-                }}</table-cell>
+              }}</table-cell>
               <table-cell v-for="campusRoster in position.roster" class="has-[i]:bg-yellow-100">
                 <team-members v-if="campusRoster.length" :team-members="campusRoster" class="space-y-1" />
                 <i v-else>N/A</i>

@@ -68,36 +68,50 @@ export default defineEventHandler(async (event) => {
     password: PCO_APP_SECRET,
   });
 
-  const headers = { headers: { Authorization: `Basic ${basicAuth}` } };
+  const headers = { Authorization: `Basic ${basicAuth}` };
 
   const serviceTypes = await Promise.all(
     services.map(async (serviceType) => {
-      let offset = "";
-      const query = getQuery(event);
-
-      if (query.offset) {
-        offset = `&offset=${Number(query.offset || "0")}`;
-      }
-
       const plans = await $fetch<PlansResponse>(
-        `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/plans?filter=future&per_page=1${offset}`,
-        headers
+        `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/plans`,
+        {
+          headers,
+          query: {
+            ...getQuery(event),
+            per_page: 1,
+            "fields[Plan]": "short_dates",
+            filter: "future",
+          },
+        }
       );
 
       const planUrl = getPlanUrl(plans);
 
       const [teamMembers, neededPositions, teams] = await Promise.all([
-        $fetch<TeamMemberResponse>(
-          planUrl + "/team_members?per_page=100`",
-          headers
-        ),
-        $fetch<NeededPositionResponse>(
-          planUrl + "/needed_positions?per_page=100",
-          headers
-        ),
+        $fetch<TeamMemberResponse>(planUrl + "/team_members", {
+          headers,
+          query: {
+            per_page: 100,
+            "fields[PlanPerson]":
+              "name,status,photo_thumbnail,team_position_name,team",
+          },
+        }),
+        $fetch<NeededPositionResponse>(planUrl + "/needed_positions", {
+          headers,
+          query: {
+            per_page: 100,
+          },
+        }),
         $fetch<TeamResponse>(
-          `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/teams?include=team_positions`,
-          headers
+          `https://api.planningcenteronline.com/services/v2/service_types/${serviceType.id}/teams`,
+          {
+            headers,
+            query: {
+              include: "team_positions",
+              "fields[Team]": "name,team_positions",
+              "fields[TeamPosition]": "name",
+            },
+          }
         ),
       ]);
       return {
@@ -154,7 +168,8 @@ export default defineEventHandler(async (event) => {
 
     for (const teamMember of teamMembers.data) {
       const teamId = teamMember.relationships.team.data.id;
-      const positionName = teamMember.attributes.team_position_name;
+      const positionName =
+        teamMember.attributes.team_position_name.toUpperCase();
 
       const teamPosition = teamsById[teamId].positions[positionName];
 
@@ -206,7 +221,9 @@ export default defineEventHandler(async (event) => {
 
     const team = {
       teamName: teamName,
-      positions,
+      positions: positions.sort((a, b) => {
+        return a.positionName > b.positionName ? 1 : -1;
+      }),
     };
 
     if (positions.length) {
