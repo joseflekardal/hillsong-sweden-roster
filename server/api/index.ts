@@ -4,7 +4,6 @@ import type {
   Team,
   PlansResponse,
   TeamMemberResponse,
-  NeededPositionResponse,
   TeamResponse,
   PositionsByName,
 } from "~/types";
@@ -30,29 +29,16 @@ export default defineEventHandler(async (event) => {
     CACHE: KVNamespace;
   };
 
-  console.log({ CACHE_TTL });
-
-  const cache = await CACHE.get(event.path);
+  const cache = await CACHE.get(event.path, {
+    type: "json",
+  });
 
   if (cache) {
-    const { timestamp, payload } = JSON.parse(cache);
-
-    const ellapsed = new Date().getTime() - new Date(timestamp).getTime();
-    const ellapsedMinutes = ellapsed / 1000 / 60;
-
-    console.log({ ellapsedMinutes });
-
-    if (ellapsedMinutes < Number(CACHE_TTL)) {
-      console.log("serving cached data");
-      setResponseHeader(event, "X-CACHE-STATUS", "HIT");
-      setResponseHeader(event, "AGE", Math.round(ellapsed / 1000));
-
-      return payload;
-    }
+    console.log("CACHE HIT");
+    return cache;
   }
 
-  console.log("serving fresh data");
-  setResponseHeader(event, "X-CACHE", "MISS");
+  console.log("CACHE MISS");
 
   const services = [
     { id: "1134523", name: "Norra" },
@@ -82,24 +68,18 @@ export default defineEventHandler(async (event) => {
             "fields[Plan]": "short_dates",
             filter: "future",
           },
-        }
+        },
       );
 
       const planUrl = getPlanUrl(plans);
 
-      const [teamMembers, neededPositions, teams] = await Promise.all([
+      const [teamMembers, teams] = await Promise.all([
         $fetch<TeamMemberResponse>(planUrl + "/team_members", {
           headers,
           query: {
             per_page: 100,
             "fields[PlanPerson]":
               "name,status,photo_thumbnail,team_position_name,team",
-          },
-        }),
-        $fetch<NeededPositionResponse>(planUrl + "/needed_positions", {
-          headers,
-          query: {
-            per_page: 100,
           },
         }),
         $fetch<TeamResponse>(
@@ -109,33 +89,34 @@ export default defineEventHandler(async (event) => {
             query: {
               include: "team_positions",
               "fields[Team]": "name,team_positions",
-              "fields[TeamPosition]": "name",
+              "fields[TeamPosition]": "name,sequence",
             },
-          }
+          },
         ),
       ]);
       return {
         teams,
         teamMembers,
         plans,
-        neededPositions,
       };
-    })
+    }),
   );
 
-  const allPositionsByTeamName = new Map<string, Set<string>>();
+  const allPositionsByTeamName = new Map<string, Map<string, number | null>>();
 
   const formattedServiceTypes: FormattedTeams[] = [];
   for (const serviceType of serviceTypes) {
-    const { teamMembers, neededPositions, teams } = serviceType;
+    const { teamMembers, teams } = serviceType;
 
-    const teamPositionById = teams.included.reduce<Record<string, string>>(
-      (acc, cur) => {
-        acc[cur.id] = cur.attributes.name.toUpperCase();
-        return acc;
-      },
-      {}
-    );
+    const teamPositionById = teams.included.reduce<
+      Record<string, { name: string; sequence: number | null }>
+    >((acc, cur) => {
+      acc[cur.id] = {
+        name: cur.attributes.name.toUpperCase(),
+        sequence: cur.attributes.sequence,
+      };
+      return acc;
+    }, {});
 
     const teamsById: FormattedTeams = {};
     const teamsByName: FormattedTeams = {};
@@ -147,18 +128,19 @@ export default defineEventHandler(async (event) => {
         positions:
           team.relationships.team_positions.data.reduce<PositionsByName>(
             (acc, teamPosition) => {
-              const positionName = teamPositionById[teamPosition.id];
+              const position = teamPositionById[teamPosition.id];
 
-              const positionSet =
-                allPositionsByTeamName.get(teamName) || new Set();
+              const positionMap =
+                allPositionsByTeamName.get(teamName) ||
+                new Map<string, number | null>();
 
-              positionSet.add(positionName);
-              allPositionsByTeamName.set(teamName, positionSet);
+              positionMap.set(position.name, position.sequence);
+              allPositionsByTeamName.set(teamName, positionMap);
 
-              acc[positionName] = [];
+              acc[position.name] = [];
               return acc;
             },
-            {}
+            {},
           ),
       };
 
@@ -170,7 +152,6 @@ export default defineEventHandler(async (event) => {
       const teamId = teamMember.relationships.team.data.id;
       const positionName =
         teamMember.attributes.team_position_name.toUpperCase();
-
       const teamPosition = teamsById[teamId].positions[positionName];
 
       if (!teamPosition) {
@@ -193,10 +174,12 @@ export default defineEventHandler(async (event) => {
   const teams: Team[] = [];
   allPositionsByTeamName.forEach((positionSet, teamName) => {
     const positions: Team["positions"] = [];
-    positionSet.forEach((positionName) => {
+
+    positionSet.forEach((sequence, positionName) => {
       let hasPeople = false;
       const position = {
-        positionName,
+        sequence: sequence,
+        positionName: positionName,
         roster: formattedServiceTypes.map((serviceType) => {
           const serviceTeam = serviceType[teamName];
 
@@ -222,7 +205,9 @@ export default defineEventHandler(async (event) => {
     const team = {
       teamName: teamName,
       positions: positions.sort((a, b) => {
-        return a.positionName > b.positionName ? 1 : -1;
+        return (a.sequence || a.positionName) > (b.sequence || a.positionName)
+          ? 1
+          : -1;
       }),
     };
 
@@ -237,12 +222,16 @@ export default defineEventHandler(async (event) => {
     services,
   };
 
-  const cachePayload = JSON.stringify({
-    payload: response,
-    timestamp: new Date().toISOString(),
-  });
+  let cacheTtl = Number(CACHE_TTL);
+  if (Number.isNaN(cacheTtl)) {
+    cacheTtl = 10;
+  }
 
-  await CACHE.put(event.path, cachePayload);
+  const cachePayload = JSON.stringify(response);
+
+  await CACHE.put(event.path, cachePayload, {
+    expirationTtl: cacheTtl * 60,
+  });
 
   return response;
 });

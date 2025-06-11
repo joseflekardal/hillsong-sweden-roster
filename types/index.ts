@@ -46,7 +46,13 @@ export type TeamResponse = {
       };
     };
   }[];
-  included: { id: string; attributes: { name: string } }[];
+  included: {
+    id: string;
+    attributes: {
+      name: string;
+      sequence: number | null;
+    };
+  }[];
 };
 
 export type Status = "D" | "C" | "U";
@@ -67,6 +73,7 @@ export type FormattedTeams = Record<
 
 export interface TeamPosition {
   positionName: string;
+  sequence: number | null;
   roster: PersonSlim[][];
 }
 
